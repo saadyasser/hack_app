@@ -1,0 +1,61 @@
+.posts {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.posts .container {
+  width: 70%;
+  margin: 0 auto;
+}
+.posts .inline-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.posts .post {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+}
+.posts .post p {
+  width: 80%;
+}
+.posts .navigation {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 20px;
+}
+.posts .navigation span + span {
+  padding: 10px;
+}
+.posts label {
+  padding-right: 5px;
+}
+.posts .actions {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.posts .action-list {
+  position: relative;
+}
+.posts .actions > .action-list > .action-card {
+  border: 1px solid #ddd;
+  padding: 5px;
+  display: inline-block;
+  position: absolute;
+  top: 17px;
+  right: -17px;
+  /* margin-right: 2px; */
+  border-radius: 3px;
+}
+.posts .actions > .action-list > .action-card .flex {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
