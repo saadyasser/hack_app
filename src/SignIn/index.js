@@ -6,7 +6,7 @@ import Button from "../button";
 const SignIn = () => {
   const { value, setValue } = useState("");
   return (
-    <div className="login">
+    <div className="login" >
     <Card
       head="Login"
       details="Fill the following information to access your account!"
