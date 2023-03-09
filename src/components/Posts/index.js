@@ -9,6 +9,7 @@ function Posts({ posts }) {
     false,
     false,
   ]);
+  console.log('dddf');
   return (
     <section className="posts">
       <div className="container">
@@ -41,12 +42,14 @@ function Posts({ posts }) {
                 onClick={() => {
                   isShowAction[key] = !isShowAction[key];
                   setIsShowAction(isShowAction);
-                  console.log(isShowAction);
                 }}
                 className="action"
                 src="/three-dots.png"
                 alt="fkdfkfd"
               />
+            </div>
+            <div className="share">
+              <img src="/share.png" alt="" />
             </div>
           </div>
         ))}
