@@ -41,3 +41,26 @@
   top: 15px;
   right: 15px;
 }
+.posts .action-list {
+  position: relative;
+}
+.posts .actions > .action-list > .action-card {
+  border: 1px solid #ddd;
+  padding: 5px;
+  display: inline-block;
+  position: absolute;
+  top: 17px;
+  right: -17px;
+  /* margin-right: 2px; */
+  border-radius: 3px;
+}
+.posts .actions > .action-list > .action-card .flex {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.share {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}

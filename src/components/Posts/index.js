@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
 import './index.css'
-
 import Modal from '../../Modal'
 import AddPost from '../AddPost'
 
 function Posts({ posts }) {
+  const [isShowAction, setIsShowAction] = useState([
+    true,
+    true,
+    true,
+    true,
+    true,
+  ])
   const [showAdd, setShowAdd] = useState(false)
-  console.log('showAdd', showAdd)
   return (
     <section className="posts">
       <div className="container">
@@ -23,17 +28,37 @@ function Posts({ posts }) {
         </div>
 
         {posts.map((post, key) => (
-          <div className="post" key={key}>
+          <div className="post" key={post.key}>
             <img src={post.image} alt="i" />
             <p>{post.name}</p>
+
             <div className="actions">
-              <img className="action" src="/three-dots.png" alt="fkdfkfd" />
-              <span className="action-list">
-                <span>
-                  <img src="/edit.png" />
-                  <span>Edit</span>
+              {isShowAction[key] ? (
+                <span className="action-list">
+                  <div className="action-card">
+                    <div className="flex">
+                      <img src="/edit.png" alt="dd" />
+                      <span>Edit</span>
+                    </div>
+                    <div className="flex">
+                      <img src="/delete.png" alt="dkdkdf" />
+                      <span>Delete</span>
+                    </div>
+                  </div>
                 </span>
-              </span>
+              ) : null}
+              <img
+                onClick={() => {
+                  isShowAction[key] = !isShowAction[key]
+                  setIsShowAction(isShowAction)
+                }}
+                className="action"
+                src="/three-dots.png"
+                alt="fkdfkfd"
+              />
+            </div>
+            <div className="share">
+              <img src="/share.png" alt="" />
             </div>
           </div>
         ))}
