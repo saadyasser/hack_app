@@ -9,7 +9,6 @@ function Posts({ posts }) {
     false,
     false,
   ]);
-  console.log('dddf');
   return (
     <section className="posts">
       <div className="container">
